@@ -330,3 +330,19 @@ Let's see if there are some pulse mods:
  - ```/dth vendors mods pulse```
 
 ![Alt text](image-45.png)
+
+### 22. Ubisoft Report
+```/dth ubisoft-report <insert-cheater-here>```, is a command that came later this year. It's purpose is to use the data we have on cheater and submit it directly to Ubisoft. Basically, you do not have to login to Ubisoft, create a ticket, paste data, write stuff and so on. It does it for you in 2 seconds. 
+
+The conditions for this are simple:
+ - Player must be a confirmed cheater in ISAC 2.0
+ - Player must have evidence linked to their profile
+
+ Let's put it to the test:
+
+ ![Alt text](image-46.png)
+
+ That's it. 
+
+ ### 23. Congratulations
+ Your reached the summit. Don't hasitate to open this documentation whenever you feel lost. Remember: ```EVERY COMMAND``` cand be ```SUFFIXED``` with ```help```. Meaning that the command itself will tell you what to do. 
