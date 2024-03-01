@@ -63,9 +63,9 @@ This command can be ran in 2 places:
 ![Alt text](image-10.png)
 
 ### 7. Analyze
-```/alpha analyze``` is a command which attempts to use local data in order to perform static analysis between username changes. In pther words, every time someone changes name, their account information is logged and it's bound together by something called ```uplay id```. This ID is unique and cannot be change. It's what allows the system to store username changes and bind data. Leaving this explanation asside, we can use the account snapshots to calculate differences in between them. The command can be used in 2 pars:
- - ```/alpha analyze <insert-player-here>```, this will run it on a given player.
- - ```/alpha analyze me```, this will analyze it for youself, assuming you have an ISAC Profile registered.
+```/dth analyze``` is a command which attempts to use local data in order to perform static analysis between username changes. In pther words, every time someone changes name, their account information is logged and it's bound together by something called ```uplay id```. This ID is unique and cannot be change. It's what allows the system to store username changes and bind data. Leaving this explanation asside, we can use the account snapshots to calculate differences in between them. The command can be used in 2 pars:
+ - ```/dth analyze <insert-player-here>```, this will run it on a given player.
+ - ```/dth analyze me```, this will analyze it for youself, assuming you have an ISAC Profile registered.
 
  Examples:
   - Self Analysis:
@@ -209,3 +209,124 @@ You got a limit of 40 usernames you can store on your watchlist. It's usage is v
 ```/dth report``` is the command you want to use, if you want to send us evidence. It requires a few parameters, but we'll walk you through it. Go ahead and run ```/dth report help```.
 
 ![Alt text](image-34.png)
+
+The paramters required for running this command:
+ - ```-u <insert-username>```, provide the username
+ - ```-l <insert-proof>```, provide the proof. Put your input in between "", if you got multiple links to send
+ - ```-d <insert-description>```, provide the description. Put it in between "", if you want to send multiple words
+
+Now, lyour input should look like this:
+ - ```/dth report -u lmao-b -l "youtube1 youtube2 youtube3" -d "this user is cheating his ass off"```
+
+You can also find the full example when checking the command helper.
+
+### 21. Vendor Reset
+```/dth vendors``` is a really cool and useful commands. It uses data provided by RubemAlamina.mx in order to perform vendor listing and searching. The command is very rich in features so pay attention. 
+Let's run it: ```/dth vendors help```. This will display the helper that you see bellow:
+
+![Alt text](image-35.png)
+
+Don't be scared, I know it looks overwhelming, but once you use it a few times, it will feel like nothing. 
+
+There are multiple subcomands that you can use:
+ - ```/dth vendors must-buy``` -> This will return items that ISAC deems important. This includes: All exotics, All DZ Exclusives and All Named Items
+
+Now we can dive into vendor locations, these vendor locations have 3 gear categories:
+gear, weapons and mods. 
+
+Logically, it looks something like this:
+ - ```/dth vendors <vendor-location> <gear-type>```
+
+Vendor locations:
+ - whitehouse
+ - countdown
+ - theater
+ - campus
+ - haven
+ - benitez
+ - dz-south
+ - dz-west
+ - dz-east
+ - cassie
+ - clan
+ - castle
+
+Ger Types:
+ - mods
+ - gear
+ - weapons
+
+Now, let's combine a random location with some random gear type. Say, we wanna see what gear is to sale at the castle vendor:
+
+ - ```/dth vendors castle gear``` -> In this example we replaced ```<vendor-location>``` with ```castle``` and ```<gear-type>``` with ```gear```
+
+ ![Alt text](image-36.png)
+ 
+Let's see what weapons are found at the whitehouse vendor:
+ - ```/dth vendors whitehouse weapons``` -> Same as above, we replaced the location and the gear type. 
+
+ ![Alt text](image-37.png)
+
+We know how annoying expertise and optimization can be, for that, we can also filter by item slot:
+ - ```/dth vendors slot <insert-slot-here>```
+
+Valid slots:
+- backpack
+- chest
+- kneepads
+- mask
+- gloves
+- holster
+
+Let's put it to the test, let's try to find some gloves:
+ - ```/dth vendors slot gloves```
+
+![Alt text](image-41.png)
+
+Now we can move on to ```vendor searching```. It's sort of like Google, but for vendors. Vendor searching searches by ```gear / weapon name``` AND NOT BY ```brand``` or ```TYPE``` or ```SLOT```. We got commands for these as well. The command looks like this: 
+ - ```/dth vendors search <insert-keyword>```
+
+Let's search for EveryDay Carrier:
+ - ```/dth vendors search everyday```
+ - ```/dth vendors search "everyday carrier"```
+
+![Alt text](image-38.png)
+
+Let's find a weapon:
+
+![Alt text](image-39.png)
+
+We can also search for weapons / gear that have some talent you need:
+
+ - ```/dth vendors talent <insert-talent-name>```
+
+ Say I want to find something with "efficient" on. No problem:
+ - ```/dth vendors talent efficient```
+
+ ![Alt text](image-40.png)
+
+ Brands you say? Say no more, we got it as well. If you wish to find gear that belongs to a certain brand. The command looks like this:
+  - ```/dth vendors brand <insert-brand-here>``` -> The requested parameter can be a simple keyword such as ```badger``` or the full thing: ```badger tuff```
+
+Let's give it a try:
+ - ```/dth vendors brand "badger tuff"```
+
+![Alt text](image-42.png)
+
+Say I want Fenris, now:
+ - ```/dth vendors brand fenris```
+
+![Alt text](image-43.png)
+
+Quite easy. Now we land to our last category: ```mods```. The command is simple and it requires just a keyword:
+ - ```/dth vendors mods <insert-keyword>```
+
+For example, say I need some skill haste mods:
+ - ```/dth vendors mods "skill haste"```
+
+![Alt text](image-44.png)
+
+Let's see if there are some pulse mods:
+ - ```/dth vendors mods pulse```
+
+![Alt text](image-45.png)
