@@ -28,14 +28,14 @@ In other words, when you are lost and don't know what command to use, run ```/al
 ![Alt text](image-3.png)
 
 ### 4. Me
-```/alpha me``` is a command which will attempt to use your profile to track yourself. In other words, you track yourself. In order for this to work, you have to register your profile. For that, you may check the registration step below.
+```/alpha me``` is a command which will attempt to use your profile to track yourself. In other words, you track yourself. In order for this to work, you have to register your profile. For that, you may check the registration step below. (Step: 7)
 
 ![Alt text](image-4.png)
 
 ### 5. Analyze
 ```/alpha analyze``` is a command which attempts to use local data in order to perform static analysis between username changes. In pther words, every time someone changes name, their account information is logged and it's bound together by something called ```uplay id```. This ID is unique and cannot be change. It's what allows the system to store username changes and bind data. Leaving this explanation asside, we can use the account snapshots to calculate differences in between them. The command can be used in 2 pars:
  - ```/alpha analyze <insert-player-here>```, this will run it on a given player.
- - ```/alpha analyze me```, this will analyze it for youself, assuming you have an ISAC Profile registered.
+ - ```/alpha analyze me```, this will analyze it for youself, assuming you have an ISAC Profile registered. (Step 7.)
 
  When running it, you should see something like this:
  - ```/alpha analyze me```:
@@ -67,7 +67,7 @@ In other words, when you are lost and don't know what command to use, run ```/al
  ![Alt text](image-10.png)
 
  ### 7. Registration
-```/alpha register``` command, will help you bind your current discord account to your in-game Division account. This gives you access to:
+```/alpha register -u <insert-username-here> -n <insert-nickname-here>``` command, will help you bind your current discord account to your in-game Division account. This gives you access to:
  - ```/alpha analyze me``` - self-analysis
  - ```/alpha me``` - profile tracking
 
@@ -87,8 +87,45 @@ In other words, when you are lost and don't know what command to use, run ```/al
 
  ![Alt text](image-13.png)
 
- ### Removing your profile
+ ### 8. Removing your profile
  ```/alpha unregister``` provides this functionality. Will not dive deep into this since it's the opposite to the step you find above. It will wipe your profile. 
  - Example:
 
 ![Alt text](image-14.png)
+
+### 9. Player tracking
+```/alpha track <insert-username-here>``` is the most used command. You probably used it already, it's what gives ISAC it's power. This command connects to Ubisoft Connect Services, pulls data, passes it through it's filtering algorithms, stores it and then it gives it to you. 
+ - Example:
+
+ ![Alt text](image-15.png)
+
+ ### 10. Player searching
+ ```/alpha search <insert-keyword>``` is basically ISAC's own version of Google. Since ISAC stores it's data in a database, it makes it possible for users to search for it. This is useful in case you do not remember a name, you're lazy or you simply want to explore what you can find. It requires a simple keyword. Contrary to ```/alpha track <insert-username-here>```, it does not require the EXACT username, instead, you provide it with a keyword.
+  - Example:
+
+![Alt text](image-16.png)
+
+There is an additional parameter which you can send it, ```--legacy```. ISAC has a built-in method from grabbing older usernames. Some proviles have something listed on them that reads ```Legacy / Pre-ISAC Usernames```. This is essentially a list of really old names auto-grabbed. You can "force" ISAC to search the database, based on these names.
+ - Example:
+
+![Alt text](image-17.png)
+
+### 10. User Merits
+```/alpha usermerits``` is a command that displays ```custom merits```, created by staff members. Custom merits are segments of text displayed on each profile under ```Listed merits```. The most common ones include:
+ - High Priority Target
+ - Suspicious Player
+ - Cheater Companion
+
+Running that command, will output:
+
+![Alt text](image-18.png)
+
+### 11. Report
+```/alpha report <insert-cheater-username-here>``` is a command that will submit a report directly to Ubisoft on your behalf. In order to be able to do this, certain conditions must be met:
+ - Player has to be a confirmed cheater in ISAC
+ - Player has to have evidence assigned to their profile
+ - A report has not already been submitted for this player in the last 24 hours. In other words, you can do it per player / per 24 hours. This is to prevent spam.
+ - Example:
+
+ ![Alt text](image-19.png)
+
