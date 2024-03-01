@@ -1,0 +1,422 @@
+<html>
+
+<style>
+    html {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <h2>ISAC 2.0 Documentation</h2>
+    <p>This bot is responsible for tracking players in the game Tom Clancy's The Division2 or Division2.</p>
+    <p>It responds to the command:</p>
+    <ul>
+        <li><code>/dth</code></li>
+    </ul>
+    <p>Initially you might find yourself lose, no worries, just give it a try, run: <code>/dth</code></p>
+    <p><img src="image.png" alt="Alt text"></p>
+    <p>This is the bot replying to you and telling you that you use run: <code>/dth help</code>, as it requires a sub
+        commmand from the &quot;dth&quot; stack.</p>
+    <h3>1. The Helper</h3>
+    <p><code>/dth help</code> command, provides you with everything you need to know to get yourself started. It will
+        showcase every command available to you.</p>
+    <p><img src="image-1.png" alt="Alt text"></p>
+    <h3>2. About</h3>
+    <p><code>/dth about</code> command provides you with information on who buiilt the system and what tech stack the
+        system
+        uses.</p>
+    <p><img src="image-2.png" alt="Alt text"></p>
+    <h3>3. FAQ (Frequently Asked Questions)</h3>
+    <p><code>/dth faq</code> command provides a convenient way to list information about ISAC, what people are curious
+        about, the rules and more. Its contents are frequently updated so the image below, might not reflect it's
+        current
+        state.</p>
+    <p><img src="image-3.png" alt="Alt text"></p>
+    <h3>4. Active Players</h3>
+    <p><code>/dth active-players</code> is a command which outputs a rough estimate of active players, based on local
+        data.
+        It's not accurate, we know, but, it's the closest thing you got for Division2, in terms of online players.</p>
+    <p><img src="image-4.png" alt="Alt text"></p>
+    <h3>5. Username Check</h3>
+    <p><code>/dth username-check &lt;insert-platform&gt; &lt;insert-username&gt;</code> provides you with an easy way to
+        see
+        if the username you want to change to is available or not. As a general idea, the platform can take 3 values:
+    </p>
+    <ul>
+        <li>pc:</li>
+    </ul>
+    <p><img src="image-5.png" alt="Alt text"></p>
+    <ul>
+        <li>psn (Playstation Network)</li>
+    </ul>
+    <p><img src="image-6.png" alt="Alt text"></p>
+    <ul>
+        <li>xbox</li>
+    </ul>
+    <p><img src="image-7.png" alt="Alt text"></p>
+    <h3>6. Subscription</h3>
+    <p><code>/dth subscription</code> will display subscription information related to ISAC. As a general idea, ISAC is
+        free
+        to use in it's official discord. But, in order to use it in a private server, you will have to have an active
+        trial
+        or subscription.</p>
+    <p>This command can be ran in 2 places:</p>
+    <ul>
+        <li>DMs (ISAC is indeed DMable) -&gt; displays your user subscription info</li>
+    </ul>
+    <p><img src="image-8.png" alt="Alt text"></p>
+    <ul>
+        <li>Server -&gt; Displays Server Subscription info</li>
+    </ul>
+    <p><img src="image-9.png" alt="Alt text"></p>
+    <h3>7. Daily Loot</h3>
+    <p><code>/dth daily-loot</code> command, will showcase today's targeted loot.</p>
+    <p><img src="image-10.png" alt="Alt text"></p>
+    <h3>7. Analyze</h3>
+    <p><code>/dth analyze</code> is a command which attempts to use local data in order to perform static analysis
+        between
+        username changes. In pther words, every time someone changes name, their account information is logged and it's
+        bound together by something called <code>uplay id</code>. This ID is unique and cannot be change. It's what
+        allows
+        the system to store username changes and bind data. Leaving this explanation asside, we can use the account
+        snapshots to calculate differences in between them. The command can be used in 2 pars:</p>
+    <ul>
+        <li><code>/dth analyze &lt;insert-player-here&gt;</code>, this will run it on a given player.</li>
+        <li><code>/dth analyze me</code>, this will analyze it for youself, assuming you have an ISAC Profile
+            registered.
+        </li>
+    </ul>
+    <p>Examples:</p>
+    <ul>
+        <li>Self Analysis:</li>
+    </ul>
+    <p><img src="image-11.png" alt="Alt text"></p>
+    <ul>
+        <li>Player Analysis:</li>
+    </ul>
+    <p><img src="image-12.png" alt="Alt text"></p>
+    <h3>8. Compare</h3>
+    <p><code>/dth compare &lt;insert-first-username&gt; &lt;insert-second-username&gt;</code> will atempt to compare 2
+        accounts, calculate a score and simply determine which score is higher. The score consists of headshots,
+        bodyshots
+        and crits. Of course, headshots have a 0.2 modified, since they require more skill. Example:</p>
+    <p><img src="image-13.png" alt="Alt text"></p>
+    <h3>9. Generate Password</h3>
+    <p><code>/dth generate-password</code> is a handy command which generates Ubisoft Compliant secure passwords. (WE DO
+        NOT
+        STORE ANYTHING, the bot doesn't know if you chose a password or not). The command accepts one single argument
+        which
+        is optional, that is, password length. By default, Ubisoft requires a password which contains a maximum of 16
+        characters. You can generate a password with a length with up to 30. <code>/dth generate-password 30</code>.
+        Example:</p>
+    <p><img src="image-14.png" alt="Alt text"></p>
+    <p>As you can see it generates an extremely secure password that is almost impossible to crack and is Ubisoft
+        Compliant.
+    </p>
+    <h3>10. Generate Username</h3>
+    <p><code>/dth generate-username</code> will attempt to randomly generate a list of 16 usernames, by default. You may
+        generate a maximum of 30 per execution by doing <code>/dth generate-username 30</code>. Example:</p>
+    <p><img src="image-15.png" alt="Alt text"></p>
+    <h3>11. User Merits</h3>
+    <p><code>/dth user-merits</code> is a command that showcases ISAC's merit system. The system has 2 types of merits:
+    </p>
+    <ul>
+        <li>Automatic / Auto-Assigned based on player stats</li>
+        <li>Manual / Custom (Assigned by Staff Members)</li>
+    </ul>
+    <p>In terms of custom merits, you will see &quot;Cheater Companion or Cybersherlock&quot;, the most predominant
+        ones.
+    </p>
+    <p>It's important to explain that ISAC's merit system is found on every ISAC profile, right under
+        <code>Listed Merits</code>
+    </p>
+    <p><img src="image-16.png" alt="Alt text"></p>
+    <p>Running <code>/dth user-merits</code> will output:</p>
+    <p><img src="image-17.png" alt="Alt text"></p>
+    <h3>12. Registration</h3>
+    <p><code>/dth register -u &lt;insert-username&gt; -p &lt;insert-platform&gt; -n &lt;insert-nickname&gt;</code>, will
+        enable you to create an ISAC profile, which is bound to your Discord Account. This will enable you to track
+        yourself
+        and perform self-analysis. Here's how you can use it:</p>
+    <ul>
+        <li>Run <code>/dth register help</code> first, to see the helper:</li>
+    </ul>
+    <p><img src="image-18.png" alt="Alt text"></p>
+    <ul>
+        <li>Based on the helper, you can see it requires some things, in order to work. Let's break it down together:
+        </li>
+        <li><code>-u &lt;insert-username&gt;</code>, requests your in-game username</li>
+        <li><code>-p &lt;insert-platform&gt;</code>, requests your platform. This can take one of the following values:
+            <code>uplay</code> for pc, <code>psn</code> for PlayStation and <code>xbox</code> for XBOX Live.
+        </li>
+        <li><code>-n &lt;insert-nickname&gt;</code>, requests your nickname. You can set any nickname you want.</li>
+    </ul>
+    <p>What's important as well is that, you can create 3 profiles. One for every platform.</p>
+    <p>Now, let's try an example and see how it works:</p>
+    <p><code>/dth register -u lmao-b -p uplay -n alexanderdth</code></p>
+    <p><img src="image-19.png" alt="Alt text"></p>
+    <h3>13. Removing your profile / Unregistering</h3>
+    <p><code>/dth unregister -u &lt;insert-username&gt; -p &lt;insert-platform&gt;</code> will allow you to wipe your
+        data.
+        Simple and effective. It's the opposite of the command found above. Follow the same logic.</p>
+    <p><img src="image-20.png" alt="Alt text"></p>
+    <h3>14. Me</h3>
+    <p><code>/dth me</code> is a command which pulls your account information based on a profile you created using the
+        above
+        steps. So, you have to have a profile registered for this to work.</p>
+    <p><img src="image-21.png" alt="Alt text"></p>
+    <h3>15. Track</h3>
+    <p><code>/dth track &lt;insert-username-here&gt;</code> is without a doubt the most popular command. It pulls data
+        straight from Ubisoft's servers, passes it through our algorithms, saves it and then finally, serves it to you.
+    </p>
+    <p><img src="image-22.png" alt="Alt text"></p>
+    <h3>16. Search</h3>
+    <p><code>/dth search &lt;insert-keyword&gt;</code> is basically ISAC's own version of Google. Since ISAC stores it's
+        data in a database, it makes it possible for users to search for it. This is useful in case you do not remember
+        a
+        name, you're lazy or you simply want to explore what you can find. It requires a simple keyword. Contrary to
+        <code>/dth track &lt;insert-username-here&gt;</code>, it does not require the EXACT username, instead, you
+        provide
+        it with a keyword. Example:
+    </p>
+    <p><img src="image-23.png" alt="Alt text"></p>
+    <p>There is an additional parameter which you can send it, <code>--legacy</code>. ISAC has a built-in method from
+        grabbing older usernames. Some proviles have something listed on them that reads
+        <code>Legacy / Pre-ISAC Usernames</code>. This is essentially a list of really old names auto-grabbed. You can
+        &quot;force&quot; ISAC to search the database, based on these names.
+    </p>
+    <ul>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-24.png" alt="Alt text"></p>
+    <h3>17. Playstation / XBOX Tracking</h3>
+    <p>We do support consoles to some extend, hence we have 2 endpoints to use for consoles. They are:</p>
+    <ul>
+        <li><code>/dth psn track &lt;insert-username-here&gt;</code></li>
+        <li><code>/dth xbox track &lt;insert-username-here&gt;</code></li>
+    </ul>
+    <p>Keep in mind, since xbox contains usernames with spaces, you will have to encapsulate your username in between
+        &quot;&quot;. In other words:</p>
+    <ul>
+        <li><code>/dth xbox track &quot;i am player 123&quot;</code></li>
+    </ul>
+    <h3>18. History</h3>
+    <p><code>/dth history</code> is a command which allows you to keep track of who you searched for. It's a feature
+        that is
+        not widely used, but know this, it's there. You may also specify the optional paramter <code>console</code>, in
+        order to pull information.</p>
+    <p>Examples:</p>
+    <ul>
+        <li>In DM (Listing global searches):</li>
+    </ul>
+    <p><img src="image-29.png" alt="Alt text"></p>
+    <p><img src="image-26.png" alt="Alt text"></p>
+    <ul>
+        <li>In a server (Lists searches from THAT server):</li>
+    </ul>
+    <p><img src="image-27.png" alt="Alt text"></p>
+    <p><img src="image-28.png" alt="Alt text"></p>
+    <h3>19. Watchlist</h3>
+    <p><code>/dth watchlist</code> is another obscure, but very powerful command. It's purpose is simple: store players
+        on
+        your personal watchlist. It's like your personal storage space. If you got people you want to keep an eye on,
+        drop
+        them in the watchlist.</p>
+    <p><img src="image-30.png" alt="Alt text"></p>
+    <p>You got a limit of 40 usernames you can store on your watchlist. It's usage is very simple:</p>
+    <ul>
+        <li><code>-a &lt;insert-username&gt;</code>, adds a player</li>
+        <li><code>-rm &lt;insert-username&gt;</code>, removes a player</li>
+        <li><code>-all</code>, lists your players</li>
+    </ul>
+    <p>Now, let's give it a try, let's add a player:</p>
+    <p><img src="image-31.png" alt="Alt text"></p>
+    <p>Let's list our items:</p>
+    <p><img src="image-32.png" alt="Alt text"></p>
+    <p>Finally, let's wipe a record:</p>
+    <p><img src="image-33.png" alt="Alt text"></p>
+    <p>As you can see, the functionality is very easy to use. The information displayed includes</p>
+    <ul>
+        <li>current username</li>
+        <li>username history</li>
+        <li>player merits alongside cheater status.</li>
+    </ul>
+    <h3>20. Report</h3>
+    <p><code>/dth report</code> is the command you want to use, if you want to send us evidence. It requires a few
+        parameters, but we'll walk you through it. Go ahead and run <code>/dth report help</code>.</p>
+    <p><img src="image-34.png" alt="Alt text"></p>
+    <p>The paramters required for running this command:</p>
+    <ul>
+        <li><code>-u &lt;insert-username&gt;</code>, provide the username</li>
+        <li><code>-l &lt;insert-proof&gt;</code>, provide the proof. Put your input in between &quot;&quot;, if you got
+            multiple links to send</li>
+        <li><code>-d &lt;insert-description&gt;</code>, provide the description. Put it in between &quot;&quot;, if you
+            want
+            to send multiple words</li>
+    </ul>
+    <p>Now, lyour input should look like this:</p>
+    <ul>
+        <li><code>/dth report -u lmao-b -l &quot;youtube1 youtube2 youtube3&quot; -d &quot;this user is cheating his ass off&quot;</code>
+        </li>
+    </ul>
+    <p>You can also find the full example when checking the command helper.</p>
+    <h3>21. Vendor Reset</h3>
+    <p><code>/dth vendors</code> is a really cool and useful commands. It uses data provided by RubemAlamina.mx in order
+        to
+        perform vendor listing and searching. The command is very rich in features so pay attention.
+        Let's run it: <code>/dth vendors help</code>. This will display the helper that you see bellow:</p>
+    <p><img src="image-35.png" alt="Alt text"></p>
+    <p>Don't be scared, I know it looks overwhelming, but once you use it a few times, it will feel like nothing.</p>
+    <p>There are multiple subcomands that you can use:</p>
+    <ul>
+        <li><code>/dth vendors must-buy</code> -&gt; This will return items that ISAC deems important. This includes:
+            All
+            exotics, All DZ Exclusives and All Named Items</li>
+    </ul>
+    <p>Now we can dive into vendor locations, these vendor locations have 3 gear categories:
+        gear, weapons and mods.</p>
+    <p>Logically, it looks something like this:</p>
+    <ul>
+        <li><code>/dth vendors &lt;vendor-location&gt; &lt;gear-type&gt;</code></li>
+    </ul>
+    <p>Vendor locations:</p>
+    <ul>
+        <li>whitehouse</li>
+        <li>countdown</li>
+        <li>theater</li>
+        <li>campus</li>
+        <li>haven</li>
+        <li>benitez</li>
+        <li>dz-south</li>
+        <li>dz-west</li>
+        <li>dz-east</li>
+        <li>cassie</li>
+        <li>clan</li>
+        <li>castle</li>
+    </ul>
+    <p>Ger Types:</p>
+    <ul>
+        <li>mods</li>
+        <li>gear</li>
+        <li>weapons</li>
+    </ul>
+    <p>Now, let's combine a random location with some random gear type. Say, we wanna see what gear is to sale at the
+        castle
+        vendor:</p>
+    <ul>
+        <li><code>/dth vendors castle gear</code> -&gt; In this example we replaced <code>&lt;vendor-location&gt;</code>
+            with <code>castle</code> and <code>&lt;gear-type&gt;</code> with <code>gear</code></li>
+    </ul>
+    <p><img src="image-36.png" alt="Alt text"></p>
+    <p>Let's see what weapons are found at the whitehouse vendor:</p>
+    <ul>
+        <li><code>/dth vendors whitehouse weapons</code> -&gt; Same as above, we replaced the location and the gear
+            type.
+        </li>
+    </ul>
+    <p><img src="image-37.png" alt="Alt text"></p>
+    <p>We know how annoying expertise and optimization can be, for that, we can also filter by item slot:</p>
+    <ul>
+        <li><code>/dth vendors slot &lt;insert-slot-here&gt;</code></li>
+    </ul>
+    <p>Valid slots:</p>
+    <ul>
+        <li>backpack</li>
+        <li>chest</li>
+        <li>kneepads</li>
+        <li>mask</li>
+        <li>gloves</li>
+        <li>holster</li>
+    </ul>
+    <p>Let's put it to the test, let's try to find some gloves:</p>
+    <ul>
+        <li><code>/dth vendors slot gloves</code></li>
+    </ul>
+    <p><img src="image-41.png" alt="Alt text"></p>
+    <p>Now we can move on to <code>vendor searching</code>. It's sort of like Google, but for vendors. Vendor searching
+        searches by <code>gear / weapon name</code> AND NOT BY <code>brand</code> or <code>TYPE</code> or
+        <code>SLOT</code>.
+        We got commands for these as well. The command looks like this:
+    </p>
+    <ul>
+        <li><code>/dth vendors search &lt;insert-keyword&gt;</code></li>
+    </ul>
+    <p>Let's search for EveryDay Carrier:</p>
+    <ul>
+        <li><code>/dth vendors search everyday</code></li>
+        <li><code>/dth vendors search &quot;everyday carrier&quot;</code></li>
+    </ul>
+    <p><img src="image-38.png" alt="Alt text"></p>
+    <p>Let's find a weapon:</p>
+    <p><img src="image-39.png" alt="Alt text"></p>
+    <p>We can also search for weapons / gear that have some talent you need:</p>
+    <ul>
+        <li><code>/dth vendors talent &lt;insert-talent-name&gt;</code></li>
+    </ul>
+    <p>Say I want to find something with &quot;efficient&quot; on. No problem:</p>
+    <ul>
+        <li><code>/dth vendors talent efficient</code></li>
+    </ul>
+    <p><img src="image-40.png" alt="Alt text"></p>
+    <p>Brands you say? Say no more, we got it as well. If you wish to find gear that belongs to a certain brand. The
+        command
+        looks like this:</p>
+    <ul>
+        <li><code>/dth vendors brand &lt;insert-brand-here&gt;</code> -&gt; The requested parameter can be a simple
+            keyword
+            such as <code>badger</code> or the full thing: <code>badger tuff</code></li>
+    </ul>
+    <p>Let's give it a try:</p>
+    <ul>
+        <li><code>/dth vendors brand &quot;badger tuff&quot;</code></li>
+    </ul>
+    <p><img src="image-42.png" alt="Alt text"></p>
+    <p>Say I want Fenris, now:</p>
+    <ul>
+        <li><code>/dth vendors brand fenris</code></li>
+    </ul>
+    <p><img src="image-43.png" alt="Alt text"></p>
+    <p>Quite easy. Now we land to our last category: <code>mods</code>. The command is simple and it requires just a
+        keyword:</p>
+    <ul>
+        <li><code>/dth vendors mods &lt;insert-keyword&gt;</code></li>
+    </ul>
+    <p>For example, say I need some skill haste mods:</p>
+    <ul>
+        <li><code>/dth vendors mods &quot;skill haste&quot;</code></li>
+    </ul>
+    <p><img src="image-44.png" alt="Alt text"></p>
+    <p>Let's see if there are some pulse mods:</p>
+    <ul>
+        <li><code>/dth vendors mods pulse</code></li>
+    </ul>
+    <p><img src="image-45.png" alt="Alt text"></p>
+    <h3>22. Ubisoft Report</h3>
+    <p><code>/dth ubisoft-report &lt;insert-cheater-here&gt;</code>, is a command that came later this year. It's
+        purpose is
+        to use the data we have on cheater and submit it directly to Ubisoft. Basically, you do not have to login to
+        Ubisoft, create a ticket, paste data, write stuff and so on. It does it for you in 2 seconds.</p>
+    <p>The conditions for this are simple:</p>
+    <ul>
+        <li>Player must be a confirmed cheater in ISAC 2.0</li>
+        <li>Player must have evidence linked to their profile</li>
+    </ul>
+    <p>Let's put it to the test:</p>
+    <p><img src="image-46.png" alt="Alt text"></p>
+    <p>That's it.</p>
+    <h3>23. Congratulations</h3>
+    <p>Your reached the summit. Don't hasitate to open this documentation whenever you feel lost. Remember:
+        <code>EVERY COMMAND</code> cand be <code>SUFFIXED</code> with <code>help</code>. Meaning that the command itself
+        will tell you what to do.
+    </p>
+</body>
+
+</html>

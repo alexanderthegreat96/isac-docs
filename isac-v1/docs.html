@@ -1,153 +1,203 @@
-<h2>ISAC V1 Documentation</h2>
-<p>This bot is responsable for tracking players in the game Tom Clancy's The Division or Division1.</p>
-<p>It responds to this command:</p>
-<ul>
-    <li>/alpha</li>
-</ul>
-<p>The system has a bunch of other commands that are derived from alpha. If you do not know the commands, you can simply
-    run
-    <code>/alpha</code>. Upon doing this you will be shown this message:
-</p>
-<p><img src="image.png" alt="Alt text"></p>
-<h3>1. The helper</h3>
-<p>This is the bot telling you that you need to specify a sub command of alpha. Do what it says and run:
-    <code>/alpha help</code>.
-    You should see this:</p>
-<p><img src="image-1.png" alt="Alt text"></p>
-<p>In other words, when you are lost and don't know what command to use, run <code>/alpha help</code>, and the bot will
-    showcase it's helper. Very easy.</p>
-<h3>2. Stats</h3>
-<p><code>/alpha stats</code> will showcase various database stats that are relevant to the current bot variant and it's
-    global database. It will show this:</p>
-<p><img src="image-2.png" alt="Alt text"></p>
-<h3>3. About</h3>
-<p><code>/alpha about</code> will return information about who built the system and what technologies it's using.</p>
-<p><img src="image-3.png" alt="Alt text"></p>
-<h3>4. Me</h3>
-<p><code>/alpha me</code> is a command which will attempt to use your profile to track yourself. In other words, you
-    track yourself. In order for this to work, you have to register your profile. For that, you may check the
-    registration step below. (Step: 7)</p>
-<p><img src="image-4.png" alt="Alt text"></p>
-<h3>5. Analyze</h3>
-<p><code>/alpha analyze</code> is a command which attempts to use local data in order to perform static analysis between
-    username changes. In pther words, every time someone changes name, their account information is logged and it's
-    bound together by something called <code>uplay id</code>. This ID is unique and cannot be change. It's what allows
-    the system to store username changes and bind data. Leaving this explanation asside, we can use the account
-    snapshots to calculate differences in between them. The command can be used in 2 pars:</p>
-<ul>
-    <li><code>/alpha analyze &lt;insert-player-here&gt;</code>, this will run it on a given player.</li>
-    <li><code>/alpha analyze me</code>, this will analyze it for youself, assuming you have an ISAC Profile registered.
-        (Step 7.)</li>
-</ul>
-<p>When running it, you should see something like this:</p>
-<ul>
-    <li><code>/alpha analyze me</code>:</li>
-</ul>
-<p><img src="image-5.png" alt="Alt text"></p>
-<ul>
-    <li><code>/alpha analyze &lt;insert-player-username&gt;</code>:</li>
-</ul>
-<p><img src="image-6.png" alt="Alt text"></p>
-<p>There is a possibility that you might encounter this error:
-    <code>Error performing analysis: Not enough data to analyze. There needs to be at least 2 entries in order to perform this.</code>.
-    Do not panic, it's normal. If the user you are trying to analyze never changed name, the system cannot perform this,
-    due to the fact that it requires at least 2 data points to execute the calculations.</p>
-<h3>4. Players</h3>
-<p><code>/alpha players</code> will return a rough estimate of how many players are active in game based on this month's
-    searches. Yes, it's not accurate, but, at least it is something.</p>
-<p><img src="image-7.png" alt="Alt text"></p>
-<h3>5. Pricing</h3>
-<p><code>/alpha pricing</code> will return subscription pricing information. In other words, ISAC is free to use in it's
-    official discord server. But if you want to use it in your own server, which you don't have to, but if you want, you
-    will have to get a sub. Of course, everyone get's a 30 day free trial.</p>
-<p><img src="image-8.png" alt="Alt text"></p>
-<h3>6. Subscription</h3>
-<p><code>/alpha subscription</code> will return subscription information for your current active plan. You can run it in
-    2 ways:</p>
-<ul>
-    <li>DM, yes, ISAC can be DMed. This will return info on your user plan:</li>
-</ul>
-<p><img src="image-9.png" alt="Alt text"></p>
-<ul>
-    <li>Server, which will return server subscription:</li>
-</ul>
-<p><img src="image-10.png" alt="Alt text"></p>
-<h3>7. Registration</h3>
-<p><code>/alpha register -u &lt;insert-username-here&gt; -n &lt;insert-nickname-here&gt;</code> command, will help you
-    bind your current discord account to your in-game Division account. This gives you access to:</p>
-<ul>
-    <li><code>/alpha analyze me</code> - self-analysis</li>
-    <li><code>/alpha me</code> - profile tracking</li>
-</ul>
-<p>Your first move would be to check how you can use it. Which is very simple. <code>/alpha register help</code>. This
-    will display it's helper:</p>
-<p><img src="image-11.png" alt="Alt text"></p>
-<p>To explain this better, it simply wants you to provide it with:</p>
-<ul>
-    <li><code>-u</code>, which is your in-game username</li>
-    <li><code>-n</code>, a nickname that you want people to call you by, as it will be displayed on your profile.</li>
-    <li>How to put them together:
-        <code>/alpha register -u &lt;insert-username-here&gt; -n &lt;insert-nickname-here&gt;</code></li>
-    <li>Example:</li>
-</ul>
-<p><img src="image-12.png" alt="Alt text"></p>
-<p>Upon running that, you will see this:</p>
-<p><img src="image-13.png" alt="Alt text"></p>
-<h3>8. Removing your profile</h3>
-<p><code>/alpha unregister</code> provides this functionality. Will not dive deep into this since it's the opposite to
-    the step you find above. It will wipe your profile.</p>
-<ul>
-    <li>Example:</li>
-</ul>
-<p><img src="image-14.png" alt="Alt text"></p>
-<h3>9. Player tracking</h3>
-<p><code>/alpha track &lt;insert-username-here&gt;</code> is the most used command. You probably used it already, it's
-    what gives ISAC it's power. This command connects to Ubisoft Connect Services, pulls data, passes it through it's
-    filtering algorithms, stores it and then it gives it to you.</p>
-<ul>
-    <li>Example:</li>
-</ul>
-<p><img src="image-15.png" alt="Alt text"></p>
-<h3>10. Player searching</h3>
-<p><code>/alpha search &lt;insert-keyword&gt;</code> is basically ISAC's own version of Google. Since ISAC stores it's
-    data in a database, it makes it possible for users to search for it. This is useful in case you do not remember a
-    name, you're lazy or you simply want to explore what you can find. It requires a simple keyword. Contrary to
-    <code>/alpha track &lt;insert-username-here&gt;</code>, it does not require the EXACT username, instead, you provide
-    it with a keyword.</p>
-<ul>
-    <li>Example:</li>
-</ul>
-<p><img src="image-16.png" alt="Alt text"></p>
-<p>There is an additional parameter which you can send it, <code>--legacy</code>. ISAC has a built-in method from
-    grabbing older usernames. Some proviles have something listed on them that reads
-    <code>Legacy / Pre-ISAC Usernames</code>. This is essentially a list of really old names auto-grabbed. You can
-    &quot;force&quot; ISAC to search the database, based on these names.</p>
-<ul>
-    <li>Example:</li>
-</ul>
-<p><img src="image-17.png" alt="Alt text"></p>
-<h3>10. User Merits</h3>
-<p><code>/alpha usermerits</code> is a command that displays <code>custom merits</code>, created by staff members.
-    Custom merits are segments of text displayed on each profile under <code>Listed merits</code>. The most common ones
-    include:</p>
-<ul>
-    <li>High Priority Target</li>
-    <li>Suspicious Player</li>
-    <li>Cheater Companion</li>
-</ul>
-<p>Running that command, will output:</p>
-<p><img src="image-18.png" alt="Alt text"></p>
-<h3>11. Report</h3>
-<p><code>/alpha report &lt;insert-cheater-username-here&gt;</code> is a command that will submit a report directly to
-    Ubisoft on your behalf. In order to be able to do this, certain conditions must be met:</p>
-<ul>
-    <li>Player has to be a confirmed cheater in ISAC</li>
-    <li>Player has to have evidence assigned to their profile</li>
-    <li>A report has not already been submitted for this player in the last 24 hours. In other words, you can do it per
-        player / per 24 hours. This is to prevent spam.</li>
-    <li>Example:</li>
-</ul>
-<p><img src="image-19.png" alt="Alt text"></p>
-<h3>12. Congratulations</h3>
-<p>If you follow the steps from above, you will become an ISAC master. If you got any additonal questions, do not
-    hesitate to contact the staff.</p>
+<html>
+
+<style>
+    html {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+</style>
+
+<body>
+    <h2>ISAC V1 Documentation</h2>
+    <p>This bot is responsable for tracking players in the game Tom Clancy's The Division or Division1.</p>
+    <p>It responds to this command:</p>
+    <ul>
+        <li>/alpha</li>
+    </ul>
+    <p>The system has a bunch of other commands that are derived from alpha. If you do not know the commands, you can
+        simply
+        run
+        <code>/alpha</code>. Upon doing this you will be shown this message:
+    </p>
+    <p><img src="image.png" alt="Alt text"></p>
+    <h3>1. The helper</h3>
+    <p>This is the bot telling you that you need to specify a sub command of alpha. Do what it says and run:
+        <code>/alpha help</code>.
+        You should see this:
+    </p>
+    <p><img src="image-1.png" alt="Alt text"></p>
+    <p>In other words, when you are lost and don't know what command to use, run <code>/alpha help</code>, and the bot
+        will
+        showcase it's helper. Very easy.</p>
+    <h3>2. Stats</h3>
+    <p><code>/alpha stats</code> will showcase various database stats that are relevant to the current bot variant and
+        it's
+        global database. It will show this:</p>
+    <p><img src="image-2.png" alt="Alt text"></p>
+    <h3>3. About</h3>
+    <p><code>/alpha about</code> will return information about who built the system and what technologies it's using.
+    </p>
+    <p><img src="image-3.png" alt="Alt text"></p>
+    <h3>4. Me</h3>
+    <p><code>/alpha me</code> is a command which will attempt to use your profile to track yourself. In other words, you
+        track yourself. In order for this to work, you have to register your profile. For that, you may check the
+        registration step below. (Step: 7)</p>
+    <p><img src="image-4.png" alt="Alt text"></p>
+    <h3>5. Analyze</h3>
+    <p><code>/alpha analyze</code> is a command which attempts to use local data in order to perform static analysis
+        between
+        username changes. In pther words, every time someone changes name, their account information is logged and it's
+        bound together by something called <code>uplay id</code>. This ID is unique and cannot be change. It's what
+        allows
+        the system to store username changes and bind data. Leaving this explanation asside, we can use the account
+        snapshots to calculate differences in between them. The command can be used in 2 pars:</p>
+    <ul>
+        <li><code>/alpha analyze &lt;insert-player-here&gt;</code>, this will run it on a given player.</li>
+        <li><code>/alpha analyze me</code>, this will analyze it for youself, assuming you have an ISAC Profile
+            registered.
+            (Step 7.)</li>
+    </ul>
+    <p>When running it, you should see something like this:</p>
+    <ul>
+        <li><code>/alpha analyze me</code>:</li>
+    </ul>
+    <p><img src="image-5.png" alt="Alt text"></p>
+    <ul>
+        <li><code>/alpha analyze &lt;insert-player-username&gt;</code>:</li>
+    </ul>
+    <p><img src="image-6.png" alt="Alt text"></p>
+    <p>There is a possibility that you might encounter this error:
+        <code>Error performing analysis: Not enough data to analyze. There needs to be at least 2 entries in order to perform this.</code>.
+        Do not panic, it's normal. If the user you are trying to analyze never changed name, the system cannot perform
+        this,
+        due to the fact that it requires at least 2 data points to execute the calculations.
+    </p>
+    <h3>4. Players</h3>
+    <p><code>/alpha players</code> will return a rough estimate of how many players are active in game based on this
+        month's
+        searches. Yes, it's not accurate, but, at least it is something.</p>
+    <p><img src="image-7.png" alt="Alt text"></p>
+    <h3>5. Pricing</h3>
+    <p><code>/alpha pricing</code> will return subscription pricing information. In other words, ISAC is free to use in
+        it's
+        official discord server. But if you want to use it in your own server, which you don't have to, but if you want,
+        you
+        will have to get a sub. Of course, everyone get's a 30 day free trial.</p>
+    <p><img src="image-8.png" alt="Alt text"></p>
+    <h3>6. Subscription</h3>
+    <p><code>/alpha subscription</code> will return subscription information for your current active plan. You can run
+        it in
+        2 ways:</p>
+    <ul>
+        <li>DM, yes, ISAC can be DMed. This will return info on your user plan:</li>
+    </ul>
+    <p><img src="image-9.png" alt="Alt text"></p>
+    <ul>
+        <li>Server, which will return server subscription:</li>
+    </ul>
+    <p><img src="image-10.png" alt="Alt text"></p>
+    <h3>7. Registration</h3>
+    <p><code>/alpha register -u &lt;insert-username-here&gt; -n &lt;insert-nickname-here&gt;</code> command, will help
+        you
+        bind your current discord account to your in-game Division account. This gives you access to:</p>
+    <ul>
+        <li><code>/alpha analyze me</code> - self-analysis</li>
+        <li><code>/alpha me</code> - profile tracking</li>
+    </ul>
+    <p>Your first move would be to check how you can use it. Which is very simple. <code>/alpha register help</code>.
+        This
+        will display it's helper:</p>
+    <p><img src="image-11.png" alt="Alt text"></p>
+    <p>To explain this better, it simply wants you to provide it with:</p>
+    <ul>
+        <li><code>-u</code>, which is your in-game username</li>
+        <li><code>-n</code>, a nickname that you want people to call you by, as it will be displayed on your profile.
+        </li>
+        <li>How to put them together:
+            <code>/alpha register -u &lt;insert-username-here&gt; -n &lt;insert-nickname-here&gt;</code>
+        </li>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-12.png" alt="Alt text"></p>
+    <p>Upon running that, you will see this:</p>
+    <p><img src="image-13.png" alt="Alt text"></p>
+    <h3>8. Removing your profile</h3>
+    <p><code>/alpha unregister</code> provides this functionality. Will not dive deep into this since it's the opposite
+        to
+        the step you find above. It will wipe your profile.</p>
+    <ul>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-14.png" alt="Alt text"></p>
+    <h3>9. Player tracking</h3>
+    <p><code>/alpha track &lt;insert-username-here&gt;</code> is the most used command. You probably used it already,
+        it's
+        what gives ISAC it's power. This command connects to Ubisoft Connect Services, pulls data, passes it through
+        it's
+        filtering algorithms, stores it and then it gives it to you.</p>
+    <ul>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-15.png" alt="Alt text"></p>
+    <h3>10. Player searching</h3>
+    <p><code>/alpha search &lt;insert-keyword&gt;</code> is basically ISAC's own version of Google. Since ISAC stores
+        it's
+        data in a database, it makes it possible for users to search for it. This is useful in case you do not remember
+        a
+        name, you're lazy or you simply want to explore what you can find. It requires a simple keyword. Contrary to
+        <code>/alpha track &lt;insert-username-here&gt;</code>, it does not require the EXACT username, instead, you
+        provide
+        it with a keyword.
+    </p>
+    <ul>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-16.png" alt="Alt text"></p>
+    <p>There is an additional parameter which you can send it, <code>--legacy</code>. ISAC has a built-in method from
+        grabbing older usernames. Some proviles have something listed on them that reads
+        <code>Legacy / Pre-ISAC Usernames</code>. This is essentially a list of really old names auto-grabbed. You can
+        &quot;force&quot; ISAC to search the database, based on these names.
+    </p>
+    <ul>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-17.png" alt="Alt text"></p>
+    <h3>10. User Merits</h3>
+    <p><code>/alpha usermerits</code> is a command that displays <code>custom merits</code>, created by staff members.
+        Custom merits are segments of text displayed on each profile under <code>Listed merits</code>. The most common
+        ones
+        include:</p>
+    <ul>
+        <li>High Priority Target</li>
+        <li>Suspicious Player</li>
+        <li>Cheater Companion</li>
+    </ul>
+    <p>Running that command, will output:</p>
+    <p><img src="image-18.png" alt="Alt text"></p>
+    <h3>11. Report</h3>
+    <p><code>/alpha report &lt;insert-cheater-username-here&gt;</code> is a command that will submit a report directly
+        to
+        Ubisoft on your behalf. In order to be able to do this, certain conditions must be met:</p>
+    <ul>
+        <li>Player has to be a confirmed cheater in ISAC</li>
+        <li>Player has to have evidence assigned to their profile</li>
+        <li>A report has not already been submitted for this player in the last 24 hours. In other words, you can do it
+            per
+            player / per 24 hours. This is to prevent spam.</li>
+        <li>Example:</li>
+    </ul>
+    <p><img src="image-19.png" alt="Alt text"></p>
+    <h3>12. Congratulations</h3>
+    <p>If you follow the steps from above, you will become an ISAC master. If you got any additonal questions, do not
+        hesitate to contact the staff.</p>
+
+</body>
+
+</html>
