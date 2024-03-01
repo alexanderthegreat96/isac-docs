@@ -38,7 +38,9 @@ In other words, when you are lost and don't know what command to use, run ```/al
  - ```/alpha analyze me```, this will analyze it for youself, assuming you have an ISAC Profile registered.
 
  When running it, you should see something like this:
- - ```/alpha analyze me```: 
+ - ```/alpha analyze me```:
+
  ![Alt text](image-5.png)
- - ```/alpha analyze <insert-player-username>```: 
+ - ```/alpha analyze <insert-player-username>```:
+  
  ![Alt text](image-6.png)
