@@ -129,3 +129,5 @@ Running that command, will output:
 
  ![Alt text](image-19.png)
 
+### 12. Congratulations
+If you follow the steps from above, you will become an ISAC master. If you got any additonal questions, do not hesitate to contact the staff.
