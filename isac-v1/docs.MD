@@ -10,7 +10,9 @@ The system has a bunch of other commands that are derived from alpha. If you do 
 
 ![Alt text](image.png)
 
-This is the bot telling you that you need to specify a sub command of alpha. Do what it says and run: ```/alpha help```. You should see this:
+This is the bot telling you that you need to specify a sub command of alpha. Do what it says and run: ```/alpha help```. 
+You should see this:
+
 ![Alt text](image-1.png)
 
 In other words, when you are lost and don't know what command to use, run ```/alpha help```, and the bot will showcase it's helper. Very easy.
